@@ -1,0 +1,15 @@
+<%- include ("partials/header") %>
+<link rel="stylesheet" href="/app.css">
+<h1>Books</h1>
+
+
+<% for(let i = 0; i < postvar.length; i++){ %>
+<li> <%= postvar[i].title %> - <strong> <%= postvar[i].author %></strong> </li>  
+<% } %>
+
+<% postvar.forEach(function(post){ %>
+	<li> <%= post.title %> - <strong> <%= post.author %></strong> </li>	
+	
+<% }) %>
+
+<%- include("partials/footer") %>
